@@ -21,7 +21,7 @@ from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
 from sklearn.utils import compute_class_weight
 from tqdm.auto import tqdm
 from logger import Logger
-from secrets import api_key
+# from secrets import api_key
 from utils import *
 
 
@@ -33,7 +33,7 @@ class DataGenerator:
         self.data_path = data_path
         self.logger = logger
         self.BASE_URL = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED" \
-                        "&outputsize=full&apikey=" + api_key + "&datatype=csv&symbol="  # api key from alpha vantage service
+                        "&outputsize=full&apikey=" + 'K7NNHNEI68KDD2JL' + "&datatype=csv&symbol="  # api key from alpha vantage service
         self.output_path = output_path
         self.start_col = 'open'
         self.end_col = 'eom_26'
